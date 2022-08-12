@@ -1,0 +1,9 @@
+services:
+    app:
+        build:
+            context: .
+        command: ["go", "run", "/app/main.go"]
+        volumes:
+            - ./:/app:delegated
+        ports:
+            - 80:80
